@@ -1,3 +1,4 @@
+import EventCard from "../../components/EventCard/EventCard";
 import NavBar from "../../components/Navbar/NavBar";
 import SideBar from "../../components/SideBar/SideBar";
 import ToolBar from "../../components/ToolBar/ToolBar";
@@ -13,6 +14,11 @@ const HomePage = () => {
           <div className="content">
             <h1 className="event-title">Upcoming Events</h1>
             <ToolBar />
+            <div className="event-list-container">
+              <EventCard />
+              <EventCard />
+              <EventCard />
+            </div>
           </div>
         </div>
       </div>
