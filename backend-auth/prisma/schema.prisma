@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["interactiveTransactions"]
+
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int             @id @default(autoincrement())
+  username       String          @unique
+  firstName      String          @map("first_name")
+  lastName       String          @map("last_name")
+  phoneNumber    String          @map("phone_number")
+  password       String
+  email          String
+  eventDates     EventDate[]     @relation("user_register_date")
+
+  @@map("users")
+}
+
+model Event {
+  id             Int             @id @default(autoincrement())
+  name           String          
+  status         EventStatus         
+  eventDates     EventDate[]     @relation("event_has_date")
+  office         Office          @relation("event_has_office", fields: [officeId], references: [id])
+  officeId       Int             @map("office_id")
+  location       String         
+  minimumUser    Int             @map("minimum_no_users")
+  @@map("events")
+}
+
+model EventDate {
+  id              Int            @id @default(autoincrement())
+  users           User[]         @relation("user_register_date")
+  event           Event          @relation("event_has_date", fields: [eventId], references: [id])
+  eventId         Int            @map("event_id")  
+  date            DateTime       
+
+  @@map("event_dates")
+}
+
+model Office {
+  id             Int             @id @default(autoincrement())
+  name           String          
+  event          Event[]         @relation("event_has_office")
+
+  @@map("offices")
+}
+
+enum EventStatus {
+  Registered
+  Finalized
+  Canceled
+}
