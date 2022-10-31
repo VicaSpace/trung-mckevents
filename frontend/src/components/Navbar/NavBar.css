@@ -1,0 +1,56 @@
+.navbar {
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    background-color: #223752;
+}
+
+.navbar .logo {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 30px;
+}
+
+.navbar-button {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 16px 17px;
+}
+
+.navbar-button button {
+    margin-right: 20px;
+    padding: 6px 32px;
+}
+
+.navbar .logo a {
+    color: #f2f2f2;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.signin-button {
+    color: #257CE3;
+    border: none;
+}
+
+.signup-button {
+    background-color: #257CE3;
+    border: none;
+    color: white;
+}
+
+.signin-button:hover {
+    background-color: #257CE3;
+    color: white;
+}
+
+
+.signup-button:hover {
+    background-color: white;
+    color: #257CE3;
+
+}

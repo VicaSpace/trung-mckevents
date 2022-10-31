@@ -1,6 +1,6 @@
 import "./App.css";
+import HomePage from "./pages/Home/HomePage";
 import ErrorPage from "./pages/error";
-import HomePage from "./pages/home";
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
