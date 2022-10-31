@@ -1,4 +1,4 @@
-.toolbar-container{
+.toolbar-container {
     display: flex;
     flex-direction: column;
 }
@@ -13,42 +13,114 @@
     color: white;
 }
 
-.create-event button:hover{
+.create-event button:hover {
     background-color: white;
     color: #257CE3;
 }
 
-.toolbar-content{
+.toolbar-content {
     margin-top: 20px;
     background-color: white;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.25);
-    height: 100px;
+    height: 80px;
     padding: 15px 24px;
     display: flex;
     flex-direction: column;
 }
 
-/* .search-bar {
-	display: flex;
-	align-items: center;
-	background-color: rgb(233, 233, 233);
-	border-radius: 10px;
-	padding: 5px;
-	margin-bottom: 1.5em;
+.search {
+    float: left;
+    width: 50%;
 }
 
-.search-bar input {
-	border: none;
-	background-color: rgb(233, 233, 233);
-	width: 100%;
+.filter-sort {
+    float: right;
+    width: 50%;
+    text-align: right;
 }
 
-.search-bar input:focus {
-	outline: none;
+.search-input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #D9D9D9;
+    float: left;
+    width: 60%;
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 
+.search::after {
+    content: "";
+    clear: both;
+    display: table;
 
-.search-filter-sort{
-    
-} */
+}
+
+.search-button {
+    float: left;
+    padding: 7.5px 15px;
+    background: #2196F3;
+    color: white;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+    margin-left: -20px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+    border: 1px solid #1890FF;
+}
+
+.filter-sort-btn {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    background-color: white;
+    border: none;
+}
+
+.arrow-down {
+    margin-top: 1px;
+}
+
+.filter-sort {
+    float: right;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    float: left;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content ul li {
+    text-align: left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content ul li input {
+    border: 1px solid grey;
+    padding: 0.5em;
+    /* -webkit-appearance: none; */
+} 
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
