@@ -72,7 +72,7 @@ const ToolBar = () => {
             </div>
           </div>
         </div>
-        <div className="location">filter-sort</div>
+        <div className="location"></div>
       </div>
     </div>
   );
