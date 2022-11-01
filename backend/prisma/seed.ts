@@ -13,9 +13,7 @@ async function createUsersWithEventDates() {
       email: 'trung@gmail.com',
       eventDates: {
         create: [
-          { eventId: 1, date: new Date('2022-10-30').toISOString() },
-          { eventId: 2, date: new Date('2022-10-31').toISOString() },
-          { eventId: 3, date: new Date('2022-10-29').toISOString() },
+          { eventId: 1, date: new Date('2022-11-01T19:00:00').toISOString() },
         ],
       },
     },
@@ -31,9 +29,7 @@ async function createUsersWithEventDates() {
       password: 'password',
       eventDates: {
         create: [
-          { eventId: 1, date: new Date('2022-10-31').toISOString() },
-          { eventId: 2, date: new Date('2022-11-01').toISOString() },
-          { eventId: 3, date: new Date('2022-11-02').toISOString() },
+          { eventId: 2, date: new Date('2022-11-02T17:00:00').toISOString() },
         ],
       },
     },
@@ -48,7 +44,7 @@ async function createUsersWithEventDates() {
       phoneNumber: '0163485737',
       password: 'password',
       eventDates: {
-        create: [{ eventId: 1, date: new Date('2022-10-31').toISOString() }],
+        create: [{ eventId: 3, date: new Date('2022-11-03T18:00:00').toISOString() }],
       },
     },
   });
@@ -73,7 +69,7 @@ async function createOffices() {
     where: { id: 1 },
     update: {},
     create: {
-      name: 'Ho Chi Minh city',
+      name: 'Ho Chi Minh Office',
     },
   });
 }
@@ -84,7 +80,7 @@ async function createEvents() {
     update: {},
     create: {
       name: 'Sup on Sai Gon River',
-      status: 'Registered',
+      status: 'Finalized',
       officeId: 1,
       location: 'Sai Gon River, Ho Chi Minh city',
       minimumUser: 2,
@@ -110,7 +106,7 @@ async function createEvents() {
       name: 'Badminton',
       status: 'Registered',
       officeId: 1,
-      location: 'Thanh Nhan Badminton court, 49 Chua Boc, District Dong Da',
+      location: 'Thanh Nhan Badminton',
       minimumUser: 2,
     },
   });
